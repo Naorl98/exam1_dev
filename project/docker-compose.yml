@@ -3,6 +3,7 @@ services:
     image: postgres:14
     volumes:
       - db_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       POSTGRES_DB: gutendex
       POSTGRES_USER: gutendex
@@ -57,6 +58,7 @@ services:
 
 networks:
   backend:
+    internal: true
   frontend:
 
 volumes:

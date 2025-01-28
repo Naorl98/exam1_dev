@@ -1,0 +1,2 @@
+GRANT ALL PRIVILEGES ON DATABASE gutendex TO gutendex;
+ALTER DATABASE gutendex OWNER TO gutendex;
